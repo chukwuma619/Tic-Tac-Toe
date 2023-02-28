@@ -42,14 +42,14 @@ def check_for_winner():
 
     # Check rows
     for row in range(3):
-        if game_data[row][0] == game_data[row][1] and game_data[row][0] == game_data[row][2] and game_data[row][
-            0] != " ":
+        if game_data[row][0] == game_data[row][1] and game_data[row][0] == game_data[row][2] \
+                and game_data[row][0] != " ":
             winning, winner = True, game_data[row][0]
 
     # Check Columns
     for col in range(3):
-        if game_data[col][0] != " " and game_data[col][0] == game_data[1][col] and game_data[col][0] == game_data[2][
-            col]:
+        if game_data[col][0] != " " and game_data[col][0] == game_data[1][col] \
+                and game_data[col][0] == game_data[2][col]:
             winning, winner = True, game_data[col][0]
     # Check diagonal
     if game_data[0][0] != " " and game_data[0][0] == game_data[1][1] and game_data[0][0] == game_data[2][2]:
@@ -63,6 +63,7 @@ def check_for_winner():
         else:
             print("Player 2 Wins")
     return winning
+
 
 def play_game(plyer: int):
     """Takes the player and ask the player to play, Return False if players input wrong input else Return True"""
@@ -81,6 +82,7 @@ def play_game(plyer: int):
         print("Opps...Alphabet are not allowed")
     else:
         return True
+
 
 print(game_demo)
 player = 0
