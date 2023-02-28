@@ -36,7 +36,7 @@ def print_table():
 
 
 def check_for_winner():
-    "Returns Result of the game"
+    """Returns Result of the game"""
     winning = False
     winner = None
 
